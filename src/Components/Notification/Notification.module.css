@@ -1,0 +1,16 @@
+.main{
+    width: 30vw;
+    height: 8vh;
+    background-color: aqua;
+    position:absolute;
+    top: 5%;
+    left: 69%;
+    border-radius: 10px;
+    /* padding-left: 3%; */
+}
+
+.h2{
+    /* box-sizing: border-box; */
+    padding-left: 4%;
+    /* padding-top: -2%; */
+}

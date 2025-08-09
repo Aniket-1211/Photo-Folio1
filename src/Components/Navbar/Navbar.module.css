@@ -1,0 +1,21 @@
+.main{
+    /* position: absolute; */
+    /* top: 0; */
+    background-color: rgb(222, 131, 131);
+    width: 100vw;
+    height: 11vh;
+    display: flex;
+    align-items: center;
+}
+
+.img{
+    width: 5%;
+    height: 80%;
+    margin-left: 2.5%;
+
+}
+
+.h2{
+    margin-left: 1%;
+    
+}

@@ -1,0 +1,99 @@
+.main{
+    width: 80%;
+    /* min-height: 40vh; */
+    /* background-color: beige; */
+    margin-top:5vh;
+    margin-left: 13%;
+    border-radius: 20px;
+}
+
+.h2{
+    margin: 0;;;
+    margin-bottom: 5%;
+    /* background-color: green; */
+    font-size: 1.8rem;
+    padding-left: 15%;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imageBox{
+    /* background-color: rgb(159, 159, 170); */
+    width: 15%;
+    height: 18vh;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.img{
+    width: 100%;
+    height: 80%;
+}
+
+.p{
+    margin: 0;
+    width: 100%;
+    height: 20%;
+    font-size: 1.5rem;
+    padding-left: 10%;
+    overflow: hidden;
+}
+
+.addImageFormBtn{
+    width: 6vw;
+    height: 5vh;
+    background-color: rgb(122, 185, 208);
+    border-radius: 10px;
+    position: absolute;
+    top: 16vh;
+    left: 80vw;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+
+
+.goBack{
+    width: 6vw;
+    height: 5vh;
+    border-radius: 10px;
+    position: absolute;
+    top: 16.8vh;
+
+}
+
+.goBackImg{
+    width: 80%;
+    height: 100%;
+}
+
+.editBtn{
+    width: 3vw;
+    height: 4vh;
+    background-color: aquamarine;
+    border-radius: 5px;
+    position: relative;
+    top: -110%;
+    left: 45%
+}
+
+.deleteBtn{
+    width: 3vw;
+    height: 4vh;
+    background-color: aquamarine;
+    border-radius: 5px;
+    position: relative;
+    top: -131%;
+     left: 80% 
+ } 
+
+ .edit_delete_img{
+    width: 100%;
+    height: 100%;
+ }

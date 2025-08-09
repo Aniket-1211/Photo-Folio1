@@ -1,0 +1,61 @@
+
+.main{
+    width: 70%;
+    height: auto;
+
+    margin-left: 15%;
+}
+
+.h2{
+    font-size: 2rem;
+}
+
+.box{
+    width: 20%;
+    height: 23vh;
+    /* background-color: rgb(194, 182, 182); */
+    border-radius: 10px;
+    margin-right: 4%;
+    margin-bottom: 5%;
+}
+
+.box:hover{
+    background-color: rgb(123, 240, 240);
+}
+
+.img{
+    margin: 0 ;
+    margin-left: 5%;
+    margin-top: 4%;
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.h4{
+    margin: 0  ;
+    height: 27%;
+    box-sizing: border-box;
+    padding-left: 10%;
+    font-size: 1.5rem;
+    overflow:hidden ;
+}
+
+.albumsBox{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.addAlbum{
+    width: 9%;
+    height: 6% ;
+    background-color: rgb(134, 134, 221);
+    border-radius: 10px;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    position: absolute;
+    top: 15%;
+    left: 69%;
+}
