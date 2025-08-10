@@ -9,7 +9,7 @@ import { db } from "./firebase";
 import { useState,useEffect } from "react";
 function App() {
   const[albumList,setAlbumList]=useState([]);  // albumList is used to store name of all albums in db
-  
+
   useEffect(()=>{
     let fetchData=async()=>{
       // const querySnapshot = await getDocs(collection(db,"albums"));
@@ -38,7 +38,7 @@ function App() {
   return (
     <>
     <Navbar></Navbar>
-    {/* <Notification></Notification> */}
+    {/* <Notification notify={{info:'dlete'}}></Notification> */}
     {/* <Carousel></Carousel> */}
     <AlbumList albumList={albumList}></AlbumList>
 

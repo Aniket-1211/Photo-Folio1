@@ -9,6 +9,8 @@ export default function ImageForm(props){
     let {selectedAlbum}=props // selected album name
     let {editImageId,setEditImageId}=props  // if user clicks on edit button of image then show values already present in form
 
+    let {notify,setNotify}=props;  // used to render notification component if image is added , edited or deleted 
+
     let titleRef=useRef();  
     let urlRef=useRef();
 
@@ -24,6 +26,8 @@ export default function ImageForm(props){
                 });
                 setEditImageId({});
                 setImageForm(!imageForm);
+
+                setNotify({info:'Imaged edited successfully !'}) // pass this info to notification component
                 return 
         }
 
@@ -38,6 +42,9 @@ export default function ImageForm(props){
 
         // close imageform tag after adding image
         setImageForm(!imageForm);
+
+        setNotify({info:'Imaged added successfully !'})  // pass this info to notification component
+
     }
 
             //  useEffect used to show edit image title nd url already present in d     b ,

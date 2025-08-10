@@ -5,6 +5,7 @@ import  goBack from './goBack.png'
 import deleteIcon from './deleteIcon.png'
 import editIcon from './editIcon.png'
 import Carousel from '../../Carousel/Carousel'
+import Notification from '../../Notification/Notification'
 
 import { useState ,useEffect} from 'react'
 import { collection, getDocs ,onSnapshot ,doc , deleteDoc ,setDoc } from "firebase/firestore";
@@ -21,6 +22,9 @@ export default function ImageList(props){
     let[editImageId,setEditImageId]=useState({})  // if user clicks on edit button on image , then this variable is used to pass id of selected image
 
     let [carousel,setCarousel]=useState(false);  // display all images present in current album in carousel component
+
+    let {notify,setNotify}=props;  // used to render notification component if image is added , edited or deleted 
+
     useEffect(()=>{
         let fetchData=async()=>{
           const subscribe =await onSnapshot(collection(db,"images"), (querySnapshot) => {
@@ -50,6 +54,8 @@ export default function ImageList(props){
     let handleDelete=async (id)=>{
         // console.log(id);
         await deleteDoc(doc(db, "images", id));
+
+        setNotify({info:'Image deleted successfully'}) // pass this info to notification component
     }
    
         // function to edit image already present in album
@@ -76,12 +82,15 @@ export default function ImageList(props){
 
     return(
         <>
+        { notify.info && <Notification notify={notify} setNotify={setNotify}></Notification>  }
         {
             imageForm &&    <ImageForm imageForm={imageForm}
                                        setImageForm={setImageForm}
                                        selectedAlbum={selectedAlbum}
                                        setEditImageId={setEditImageId}
                                        editImageId={editImageId}
+                                       notify={notify}
+                                       setNotify={setNotify}
                             >
                             </ImageForm>
         }

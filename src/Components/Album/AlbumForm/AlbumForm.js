@@ -22,9 +22,9 @@ export default function AlbumForm(props){
         inputRef.current.value='';
 
             // rendering notification component as user creates album
-        setNotify(!notify);
-        console.log(notify);
-        <Notification title={'Albumm created successfully'}></Notification>
+        setNotify({info:'Album added successfully'});
+        // console.log(notify);
+        // <Notification title={'Albumm created successfully'}></Notification>
         setForm(!form); // changing  form state 
         
 

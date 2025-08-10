@@ -1,9 +1,9 @@
 .main{
     width: 30vw;
     height: 8vh;
-    background-color: aqua;
+    background-color: rgb(157, 248, 248);
     position:absolute;
-    top: 5%;
+    top: 4%;
     left: 69%;
     border-radius: 10px;
     /* padding-left: 3%; */
@@ -12,5 +12,16 @@
 .h2{
     /* box-sizing: border-box; */
     padding-left: 4%;
+    margin: 0;
+    margin-top: 1%;
     /* padding-top: -2%; */
+}
+
+.greenLine{
+    
+    background-color: rgb(85, 205, 85);
+    border-radius: 10px;
+    width: 100%;
+    height: 20%;
+    margin-top: 1.9%;
 }

@@ -75,7 +75,8 @@ import styles from './AlbumList.module.css';
 import albumIcon from './albumIcon.png'
 import AlbumForm from '../AlbumForm/AlbumForm';
 import ImageList from '../../Image/ImageList/ImageList';
-import {  useState } from 'react';
+import Notification from '../../Notification/Notification';
+import {  useEffect, useState } from 'react';
 export default function AlbumList(props){
 
     const [form,setForm]=useState(false);  // setForm to render album form component on the basis of true/false
@@ -86,16 +87,26 @@ export default function AlbumList(props){
 
     let {albumList ,setAlbumList}=props  // render all albums in albumList
 
-    let [notify,setNotify]=useState(false);  // used to render notification component when user creartes album, add image or delete image
+    let [notify,setNotify]=useState({});  // used to render notification component when user creartes album, add image or delete image
 
 
     // if(form)     // passing form and setForm to render ALbum list
         // return <AlbumForm form={form} setForm={setForm} albumList={albumList} setAlbumList={setAlbumList}></AlbumForm>
+
+       
+        // if notify changes 
+    useEffect(()=>{
+        console.log(notify)
+    },[notify])
+    
+        
+
+
     if(imageList)
-        return <ImageList imageList={imageList} setImageList={setImageList}  selectedAlbum={selectedAlbum}></ImageList>
+        return <ImageList imageList={imageList} setImageList={setImageList}  selectedAlbum={selectedAlbum} notify={notify} setNotify={setNotify}></ImageList>
     return (
         <>
- 
+        { notify.info && <Notification notify={notify} setNotify={setNotify}></Notification>  }
         {/* <AlbumForm></AlbumForm> */}
         {form && <AlbumForm form={form} setForm={setForm} albumList={albumList} setAlbumList={setAlbumList} notify={notify} setNotify={setNotify}></AlbumForm>}
         <div className={styles.main}>
